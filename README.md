@@ -1,6 +1,6 @@
 # Rethinking teaching statistical computing
 
-A talk presented by [Nick Tierney](http://www.njtierney.com/), presented at [SSA Vic July 2018 Meeting on "New perspectives in statistics education""](https://www.meetup.com/Statistical-Society-of-Australia-Victorian-Branch/events/252354582/)
+A talk presented by [Nick Tierney](http://www.njtierney.com/), presented at [SSA Vic July 2018 Meeting on "New perspectives in statistics education"](https://www.meetup.com/Statistical-Society-of-Australia-Victorian-Branch/events/252354582/)
 
 Twitter: [\@nj_tierney](https://twitter.com/nj_tierney)
 
@@ -23,7 +23,7 @@ learning and teaching R over the past 5 years.
 
 The shortlink will take you HERE
 
-The source code for the slides can be found in `UseR2018-maxcovr-talk.Rmd`, and you can view the slides as they were presented at the conference [here](https://talks.updog.co/ssa2018-rethinking-statistical-computing/ssa2018-rethinking-statistical-computing.html#1).
+The source code for the slides can be found in [`SSA2018-rethinking-statistical-computing.Rmd`](https://github.com/njtierney/ssa-2018-rethinking-teaching-computing/blob/master/SSA2018-rethinking-statistical-computing.Rmd), and you can view the slides as they were presented at the conference [here](https://talks.updog.co/ssa2018-rethinking-statistical-computing/ssa2018-rethinking-statistical-computing.html#1).
 
 # References
 
