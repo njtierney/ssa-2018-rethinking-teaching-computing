@@ -1,0 +1,410 @@
+---
+title: "Rethinking teaching statistical computing"
+subtitle: ""
+author: "Nicholas Tierney <br> <br> Monash University"
+date: "SSA Vic Meetup <br> <br> Tuesday 31st July, 2018 <br> <br> .hugew[njtierney.com/talks]"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: middle, inverse, center 
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(cache = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+
+library(tidyverse)
+
+```
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+# duo_accent(
+#   primary_color = "#875F79", #pink
+#   secondary_color = "#97B792", # green
+#   text_bold_color = "#190D33", # yellow
+#   # white_color = "#190D33",
+#   text_color = "#190D33",
+#   inverse_background_color = "#190D33", # blue
+#   inverse_text_color = "#FFFFD8",
+#   inverse_header_color = "#FFFFD8",
+#   header_font_google = google_font("Josefin Sans"),
+#   text_font_google   = google_font("Montserrat", "300", "300i"),
+#   code_font_family = "Fira Code",
+#   code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+#   )
+
+# ochRe::viz_palette(pal = scico::scico(n = 4, palette = "tokyo"))
+
+# scico::scico_palette_show()
+
+# just in case I want to do a more 80s theme
+# https://github.com/m-clark/NineteenEightyR
+```
+
+```{r css-slide, echo = FALSE}
+# 
+# .vvvhugew { font-size: 750%; color:#ffffff; white}
+# .vvvvhugew { font-size: 1000%; color:#ffffff; white}
+# .vvhugeo { font-size: 500%; color:#ffa500; orange}
+# .vvhugew { font-size: 500%; color:#ffffff; white}
+# .vhugeo { font-size: 250%; color:#ffa500; orange}
+# .vhugew { font-size: 250%; color:#ffffff; white}
+# .vhugeb { font-size: 250%; color:#000000; black}
+# .hugeo { font-size: 180%; color:#ffa500; orange}
+# .hugew { font-size: 180%; color: #ffffff; white}
+# .hugeb { font-size: 180%; color:#000000; black}
+# .large { font-size: 130%;}
+# .medium { font-size: 120%;}
+# .small { font-size: 70%;}
+
+```
+
+<!-- Title: Rethinking statistical computing: Understanding how learning -->
+<!-- works means we need to rethink how we teach. -->
+
+<!-- Researchers, analysts, and statisticians need to perform analyses, and -->
+<!-- this (usually) means that they need to learn how to code. They are, -->
+<!-- however, often not taught how to code. So how do they start? This talk -->
+<!-- discusses evidence based principles on teaching from the book: \"How -->
+<!-- Learning Works\", and how they can be applied to teach statistical -->
+<!-- computing. The talk is based off of Nick\'s experience going through -->
+<!-- Software Carpentries Trainer Training curriculum, and his experience -->
+<!-- learning and teaching R over the past 5 years. -->
+
+
+# Who has taught Statistics?
+
+---
+class: center, inverse, middle
+
+# Who is _being_ taught statistics?
+
+---
+class: center, inverse, middle
+
+# Meet your neighbour
+
+.large[
+> "What are you teaching?" 
+
+> "What are you learining?"
+
+> "Who taught you statistics?"
+]
+---
+class: center, inverse, middle
+
+# Who thought they had to learn programming?
+
+---
+class: center
+# Pi-shaped researcher
+
+```{r t-vs-pi, echo = FALSE, out.width = "100%"}
+
+knitr::include_graphics("https://njtierney.updog.co/img/pi-vs-t-research.png")
+
+```
+
+.pull-left[
+[Image from Jake van der Plas](https://jakevdp.github.io/blog/2014/08/22/hacking-academia/)
+]
+
+???
+
+[Ville Tervo](https://futurice.com/blog/from-t-to-pi-design-skill-expectations-in-change)
+
+[Jake van der Plas](https://jakevdp.github.io/blog/2014/08/22/hacking-academia/)
+
+In the words of Alex Szalay, these sorts of researchers must be "Pi-shaped" as opposed to the more traditional "T-shaped" researcher. In Szalay's view, a classic PhD program generates T-shaped researchers: scientists with wide-but-shallow general knowledge, but deep skill and expertise in one particular area. The new breed of scientific researchers, the data scientists, must be Pi-shaped: that is, they maintain the same wide breadth, but push deeper both in their own subject area and in the statistical or computational methods that help drive modern research:
+
+
+---
+background-image: url(https://njtierney.updog.co/gifs/moar-pi-small.gif)
+background-size: contain 
+background-position: 50% 50%
+class: center, bottom, inverse
+
+    
+---
+class: inverse, middle, center
+
+# My journey
+
+---
+class: center, inverse
+
+# Psychology
+```{r psych-image, echo = FALSE}
+knitr::include_graphics("https://njtierney.updog.co/img/psych.png")
+```
+
+---
+class: center, inverse
+# PhD statistics
+
+```{r echo = FALSE}
+knitr::include_graphics("https://njtierney.updog.co/img/about-grad-small.jpg")
+```
+
+
+
+---
+class: inverse, center
+
+# Teaching statistics
+
+```{r teach-stats, echo = FALSE, out.width = "50%"}
+knitr::include_graphics("https://njtierney.updog.co/img/broom-headshot-small.jpg")
+```
+
+
+
+
+---
+class: inverse, middle, center
+
+# R packages
+
+
+```{r learn-more, echo = FALSE, out.width = "80%"}
+knitr::include_graphics("https://njtierney.updog.co/img/hex-visdat-and-naniar.png")
+```
+
+.pull-left[
+.center[
+.hugew[
+visdat.njtierney.com
+]
+]
+]
+
+.pull-right[
+.center[
+.hugew[
+naniar.njtierney.com
+]
+]
+]
+
+---
+class: center
+# Post Doc
+
+.pull-left[
+```{r logos, echo = FALSE}
+knitr::include_graphics("https://njtierney.updog.co/img/numbat-logo.png")
+knitr::include_graphics("https://njtierney.updog.co/img/monash-logo.png")
+```
+]
+
+.pull-right[
+```{r di-rob, echo = FALSE}
+knitr::include_graphics("http://www.dicook.org/img/dicook-2014.jpg")
+knitr::include_graphics("https://njtierney.updog.co/img/rob-medium.jpg")
+```
+
+
+]
+
+---
+background-image: url(https://njtierney.updog.co/img/carpentries.png)
+background-size: contain
+background-position: 50% 50%
+class: center, bottom, inverse
+
+
+
+
+---
+background-image: url(https://njtierney.updog.co/img/how-learning-works-cover-small.png)
+background-size: contain 
+background-position: 50% 50%
+class: center, bottom, inverse
+
+???
+s
+- discuss how I took this course
+
+
+---
+
+.vlargeb[
+**Learning** is a three part process, in which a student:
+
+1. **Receives** information accurately
+2. **Remembers** the information (long term memory)
+3. In such a way that they can **reapply** the information when appropriate
+
+(**Teaching** is whatever helps a student do that)
+]
+
+---
+background-image: url(https://njtierney.updog.co/img/tower-of-babel.gif)
+background-size: contain 
+background-position: 50% 50%
+class: center, bottom, inverse
+
+
+---
+
+# Course climate:
+
+.vlargeb[
+- Establish early
+- Make Uncertainty Safe
+- Get students talking < 5 min
+- Resist a Single Right Answer
+]
+
+---
+
+# Course climate:
+
+.vlargeb[
+
+Watch dismissive language
+
+
+> "This has an **obvious** solution"
+
+> "**Just** download the R package"
+
+> "Oh that's **easy**, **just** do this ..."
+
+> "**Simply**..."
+
+]
+
+---
+
+# Feedback
+
+.vlargeb[
+Frequent Feedback Opportunities
+]
+
+[Meghan Duffy's: "Sticky Notes as a teaching and lab meeting tool"](https://dynamicecology.wordpress.com/2015/01/13/sticky-notes-as-a-teaching-and-lab-meeting-tool/)
+
+
+.pull-left[
+```{r sticky-note-one, echo = FALSE}
+knitr::include_graphics("https://dynamicecology.files.wordpress.com/2015/01/img_1948.jpg")
+```
+]
+
+.pull-right[
+```{r sticky-note-two, echo = FALSE}
+knitr::include_graphics("https://dynamicecology.files.wordpress.com/2015/01/img_1949.jpg")
+```
+]
+
+---
+
+# Understanding learning
+
+.vlargeb[
+- Growth and fixed mindsets
+- Reframe success + failure as opportunities for growth
+]
+
+---
+
+# Reframing
+
+.pull-left[
+# From
+
+.large[
+
+> "I'll never understand"
+
+> "I just don't get programming"
+
+> "I'm not a maths person"
+
+]
+
+]
+
+--
+
+.pull-right[
+# To
+
+.large[
+> "I understand more than I did this morning"
+
+> "I can learn how to program"
+
+> "Compared to this morning, I've learnt quite a bit!"
+
+]
+
+]
+
+
+---
+
+#  Practical approaches
+
+.vlargeb[
+- Balance Lecture with Exercise:
+    - 5-10 min lecture, then
+    - 1-10 min exercises
+- Use live coding
+]
+
+???
+
+- Early Success Opportunities
+  - Teach vis first
+
+---3
+class: inverse, center, middle
+
+# Live coding?
+
+> with rmarkdown!
+
+???
+
+---
+# Recap
+
+.vlargeb[
+- Course climate: Establish early
+- Provide Frequent Feedback Opportunities (sticky notes)
+- Understand growth and fixed mindsets
+- Balance Lecture with exercise
+- Use live coding
+- Teach using R Markdown
+]
+
+
+---
+# Where to from here?
+
+.large[
+- [How learning works](https://www.amazon.com.au/How-Learning-Works-Research-Based-Principles-ebook/dp/B003IEJZXS)
+- [RStudio education](http://github.com/rstudio-education)
+- [The carpentries: instructor training](https://carpentries.github.io/instructor-training/)
+- [The carpentries - how we operate](https://carpentries.github.io/instructor-training/20-carpentries/index.html)
+- [The carpentries - live coding](https://carpentries.github.io/instructor-training/15-live/index.html)
+- [Garrett Grolemund's advice on teaching](https://community.rstudio.com/t/looking-for-best-ways-in-teaching-r-to-absolute-beginners/6998/3?u=apreshill)
+- [Learning rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html)
+- [Meghan Duffy's: "Sticky Notes as a teaching and lab meeting tool"](https://dynamicecology.wordpress.com/2015/01/13/sticky-notes-as-a-teaching-and-lab-meeting-tool/)
+- [Garret Grolemunds Teach the Tidyverse](https://github.com/rstudio-education/teach-the-tidyverse/blob/master/01-Two-Ways-to-Teach.pdf)
+- [Article by Jake van der Plas on the pi-shaped research](https://jakevdp.github.io/blog/2014/08/22/hacking-academia/)
+- [Ville Tervo article on T and Pi skills](https://futurice.com/blog/from-t-to-pi-design-skill-expectations-in-change)
+
+]
