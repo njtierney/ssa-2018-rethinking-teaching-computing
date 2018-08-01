@@ -30,6 +30,7 @@ The source code for the slides can be found in [`SSA2018-rethinking-statistical-
 - [How learning works](https://www.amazon.com.au/How-Learning-Works-Research-Based-Principles-ebook/dp/B003IEJZXS)
 - [RStudio education](http://github.com/rstudio-education)
 - [The carpentries: instructor training](https://carpentries.github.io/instructor-training/)
+- [The carpentries: learning environment and mindset](https://carpentries.github.io/instructor-training/09-mindset/index.html)
 - [The carpentries - how we operate](https://carpentries.github.io/instructor-training/20-carpentries/index.html)
 - [The carpentries - live coding](https://carpentries.github.io/instructor-training/15-live/index.html)
 - [Garrett Grolemund's advice on teaching](https://community.rstudio.com/t/looking-for-best-ways-in-teaching-r-to-absolute-beginners/6998/3?u=apreshill)
