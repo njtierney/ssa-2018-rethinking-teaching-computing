@@ -146,10 +146,12 @@ a, a > code {
 img, video, iframe {
   max-width: 100%;
 }
+
 blockquote {
   border-left: solid 5px #97B79280;
   padding-left: 1em;
 }
+
 table {
   margin: auto;
   border-top: 1px solid #666;

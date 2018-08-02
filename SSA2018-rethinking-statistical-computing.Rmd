@@ -248,6 +248,8 @@ s
 (**Teaching** is whatever helps a student do that)
 ]
 
+[Taken from Garret Grolemund's Teach the Tidyverse](https://github.com/rstudio-education/teach-the-tidyverse/blob/master/01-Two-Ways-to-Teach.pdf)
+
 ---
 background-image: url(https://njtierney.updog.co/img/tower-of-babel.gif)
 background-size: contain 
@@ -319,7 +321,9 @@ knitr::include_graphics("https://dynamicecology.files.wordpress.com/2015/01/img_
 
 ---
 
+.center[
 # Reframing
+]
 
 .pull-left[
 # From
