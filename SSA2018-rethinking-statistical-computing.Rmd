@@ -18,68 +18,10 @@ class: middle, inverse, center
 options(htmltools.dir.version = FALSE)
 
 knitr::opts_chunk$set(cache = TRUE,
-                      warning = FALSE,
-                      message = FALSE)
-
-library(tidyverse)
+               warning = FALSE,
+               message = FALSE)
 
 ```
-
-```{r xaringan-themer, include=FALSE}
-library(xaringanthemer)
-# duo_accent(
-#   primary_color = "#875F79", #pink
-#   secondary_color = "#97B792", # green
-#   text_bold_color = "#190D33", # yellow
-#   # white_color = "#190D33",
-#   text_color = "#190D33",
-#   inverse_background_color = "#190D33", # blue
-#   inverse_text_color = "#FFFFD8",
-#   inverse_header_color = "#FFFFD8",
-#   header_font_google = google_font("Josefin Sans"),
-#   text_font_google   = google_font("Montserrat", "300", "300i"),
-#   code_font_family = "Fira Code",
-#   code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
-#   )
-
-# ochRe::viz_palette(pal = scico::scico(n = 4, palette = "tokyo"))
-
-# scico::scico_palette_show()
-
-# just in case I want to do a more 80s theme
-# https://github.com/m-clark/NineteenEightyR
-```
-
-```{r css-slide, echo = FALSE}
-# 
-# .vvvhugew { font-size: 750%; color:#ffffff; white}
-# .vvvvhugew { font-size: 1000%; color:#ffffff; white}
-# .vvhugeo { font-size: 500%; color:#ffa500; orange}
-# .vvhugew { font-size: 500%; color:#ffffff; white}
-# .vhugeo { font-size: 250%; color:#ffa500; orange}
-# .vhugew { font-size: 250%; color:#ffffff; white}
-# .vhugeb { font-size: 250%; color:#000000; black}
-# .hugeo { font-size: 180%; color:#ffa500; orange}
-# .hugew { font-size: 180%; color: #ffffff; white}
-# .hugeb { font-size: 180%; color:#000000; black}
-# .large { font-size: 130%;}
-# .medium { font-size: 120%;}
-# .small { font-size: 70%;}
-
-```
-
-<!-- Title: Rethinking statistical computing: Understanding how learning -->
-<!-- works means we need to rethink how we teach. -->
-
-<!-- Researchers, analysts, and statisticians need to perform analyses, and -->
-<!-- this (usually) means that they need to learn how to code. They are, -->
-<!-- however, often not taught how to code. So how do they start? This talk -->
-<!-- discusses evidence based principles on teaching from the book: \"How -->
-<!-- Learning Works\", and how they can be applied to teach statistical -->
-<!-- computing. The talk is based off of Nick\'s experience going through -->
-<!-- Software Carpentries Trainer Training curriculum, and his experience -->
-<!-- learning and teaching R over the past 5 years. -->
-
 
 # Who has taught Statistics?
 
@@ -96,7 +38,7 @@ class: center, inverse, middle
 .large[
 > "What are you teaching?" 
 
-> "What are you learining?"
+> "What are you learning?"
 
 > "Who taught you statistics?"
 ]
@@ -110,9 +52,7 @@ class: center
 # Pi-shaped researcher
 
 ```{r t-vs-pi, echo = FALSE, out.width = "100%"}
-
-knitr::include_graphics("https://njtierney.updog.co/img/pi-vs-t-research.png")
-
+knitr::include_graphics("https://imgs.njtierney.com/pi-vs-t-research.png")
 ```
 
 .pull-left[
@@ -129,7 +69,7 @@ In the words of Alex Szalay, these sorts of researchers must be "Pi-shaped" as o
 
 
 ---
-background-image: url(https://njtierney.updog.co/gifs/moar-pi-small.gif)
+background-image: url(https://gifs.njtierney.com//moar-pi-small.gif)
 background-size: contain 
 background-position: 50% 50%
 class: center, bottom, inverse
@@ -145,7 +85,7 @@ class: center, inverse
 
 # Psychology
 ```{r psych-image, echo = FALSE}
-knitr::include_graphics("https://njtierney.updog.co/img/psych.png")
+knitr::include_graphics("https://imgs.njtierney.com/psych.png")
 ```
 
 ---
@@ -153,7 +93,7 @@ class: center, inverse
 # PhD statistics
 
 ```{r echo = FALSE}
-knitr::include_graphics("https://njtierney.updog.co/img/about-grad-small.jpg")
+knitr::include_graphics("https://imgs.njtierney.com/about-grad-small.jpg")
 ```
 
 
@@ -164,7 +104,7 @@ class: inverse, center
 # Teaching statistics
 
 ```{r teach-stats, echo = FALSE, out.width = "50%"}
-knitr::include_graphics("https://njtierney.updog.co/img/broom-headshot-small.jpg")
+knitr::include_graphics("https://imgs.njtierney.com/broom-headshot-small.jpg")
 ```
 
 
@@ -177,7 +117,7 @@ class: inverse, middle, center
 
 
 ```{r learn-more, echo = FALSE, out.width = "80%"}
-knitr::include_graphics("https://njtierney.updog.co/img/hex-visdat-and-naniar.png")
+knitr::include_graphics("https://imgs.njtierney.com/hex-visdat-and-naniar.png")
 ```
 
 .pull-left[
@@ -202,22 +142,22 @@ class: center
 
 .pull-left[
 ```{r logos, echo = FALSE}
-knitr::include_graphics("https://njtierney.updog.co/img/numbat-logo.png")
-knitr::include_graphics("https://njtierney.updog.co/img/monash-logo.png")
+knitr::include_graphics("https://imgs.njtierney.com/numbat-logo.png")
+knitr::include_graphics("https://imgs.njtierney.com/monash-logo.png")
 ```
 ]
 
 .pull-right[
 ```{r di-rob, echo = FALSE}
 knitr::include_graphics("http://www.dicook.org/img/dicook-2014.jpg")
-knitr::include_graphics("https://njtierney.updog.co/img/rob-medium.jpg")
+knitr::include_graphics("https://imgs.njtierney.com/rob-medium.jpg")
 ```
 
 
 ]
 
 ---
-background-image: url(https://njtierney.updog.co/img/carpentries.png)
+background-image: url(https://imgs.njtierney.com/carpentries.png)
 background-size: contain
 background-position: 50% 50%
 class: center, bottom, inverse
@@ -226,7 +166,7 @@ class: center, bottom, inverse
 
 
 ---
-background-image: url(https://njtierney.updog.co/img/how-learning-works-cover-small.png)
+background-image: url(https://imgs.njtierney.com/how-learning-works-cover-small.png)
 background-size: contain 
 background-position: 50% 50%
 class: center, bottom, inverse
@@ -251,7 +191,7 @@ s
 [Taken from Garret Grolemund's Teach the Tidyverse](https://github.com/rstudio-education/teach-the-tidyverse/blob/master/01-Two-Ways-to-Teach.pdf)
 
 ---
-background-image: url(https://njtierney.updog.co/img/tower-of-babel.gif)
+background-image: url(https://imgs.njtierney.com/tower-of-babel.gif)
 background-size: contain 
 background-position: 50% 50%
 class: center, bottom, inverse

@@ -3,6 +3,5 @@
 .RData
 .Rproj.user
 *libs
-*.html
 *_cache
 .DS_Store
