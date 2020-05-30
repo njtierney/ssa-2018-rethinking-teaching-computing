@@ -21,6 +21,8 @@ learning and teaching R over the past 5 years.
 
 # Slides
 
+You can view slides at [this link](njt-rethink-stat.netlify.app)
+
 The shortlink will take you HERE
 
 The source code for the slides can be found in [`SSA2018-rethinking-statistical-computing.Rmd`](https://github.com/njtierney/ssa-2018-rethinking-teaching-computing/blob/master/SSA2018-rethinking-statistical-computing.Rmd), and you can view the slides as they were presented at the conference [here](https://talks.updog.co/ssa2018-rethinking-statistical-computing/ssa2018-rethinking-statistical-computing.html#1).
